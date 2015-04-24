@@ -6,8 +6,7 @@ class Strings {
 
 	/**
 	 * 生成订单号.
-	 * @param  int
-	 * @param  string
+	 * 用uniqid获取一个基于当前的微秒数生成的唯一不重复的字符串（但是他的前7位貌似很久才会发生变动，所以不用考虑可删除），取其第8到13位。但是这个字符串里面有英文字母，用ord获取他的ASCII码
 	 * @return string
 	 */
 	public static function buildOrder()
