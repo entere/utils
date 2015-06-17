@@ -55,4 +55,24 @@ class Strings {
 		return $s;
 	}
 
+
+	/**
+	 * 把数组所有元素，按照“参数=参数值”的模式用“&”字符拼接成字符串
+	 * @param $params 需要拼接的数组
+	 * return 拼接完成以后的字符串
+	 */
+	public static function array2arg($params) {
+		$arg  = "";
+		while (list ($key, $value) = each ($params)) {
+			$arg.=$key."=".urlencode($value)."&";
+		}
+		//去掉最后一个&字符
+		$arg = substr($arg,0,count($arg)-2);
+		
+		//如果存在转义字符，那么去掉转义
+		if(get_magic_quotes_gpc()){$arg = stripslashes($arg);}
+		
+		return $arg;
+	}
+
 }
