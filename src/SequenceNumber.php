@@ -1,13 +1,12 @@
- 
 <?php
-
+namespace Entere\Utils;
 /**
  * 根据日期或者是给定前缀生成唯一数字编号，来自minyifei.cn
  * 很多时候我们需要一些固定长度的数字编码，如订单编号、卡号、用户编号等等！但是经常我们有的是存储在数据库中的有序编号，我们可以通过它直接转成一个固定长度的数字编码，然后更新到数据库中形成此记录的唯一编号。
  * $num = Entere\Utils\SequenceNumber::generateNumber($id=123,$prefix=1,$width=8);
  */
  
-namespace Entere\Utils;
+
 
 class SequenceNumber {
     
