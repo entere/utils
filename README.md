@@ -4,7 +4,8 @@
 
  安装包文件
   ```shell
-  composer require "entere/utils:dev-master"
+  #composer require "entere/utils:dev-master"
+  composer require "entere/utils:v0.1"
   ```
 
 ## 使用

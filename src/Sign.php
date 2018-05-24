@@ -14,7 +14,7 @@ class Sign {
 		$params_filter = self::paramsFilter($params);//去空
 		$params_sort = self::argSort($params_filter);//排序
 		$prestr = self::createLinkstring($params_sort);//生成待签名的字串
-		$params_sort['sign'] = self::md5Sign($prestr, $key);
+		$params_sort['sign'] = self::md5Sign($prestr, $key);//开始签名
 		return $params_sort;
 	}
 
